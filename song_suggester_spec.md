@@ -1,10 +1,46 @@
-# Song Suggster AI - Application Specification
+# Song Suggester AI - Application Specification
 
 ## 1. Overview
 
 The Song Suggster AI is a web-based application designed to provide users with personalized song and lyric suggestions based on their current emotional state or a described scenario. Leveraging advanced AI, it aims to offer highly relevant and contextually appropriate musical recommendations.
 
-## 2. Core Functionality
+## 2. Example User Prompts
+
+To guide development and testing, here are sample prompts the application should handle effectively:
+
+### 2.1 Basic Emotional States
+
+* "I'm feeling nostalgic about my childhood"
+* "I'm really angry about a breakup"
+* "I'm excited about starting a new job tomorrow"
+* "I'm feeling melancholy on a rainy afternoon"
+
+### 2.2 Specific Scenarios
+
+* "I need music for a road trip with friends"
+* "I'm studying late at night and need focus music"
+* "I just moved to a new city and feel lonely"
+* "I'm getting ready for a workout at the gym"
+
+### 2.3 Detailed Request Format
+
+* "I want 3 song suggestions with 3 lines of lyrics and then 2-3 sentences explaining why chosen"
+* "Give me songs that match my current mood: stressed but hopeful about the future"
+* "I need uplifting songs with meaningful lyrics for someone going through depression"
+
+### 2.4 Personality-Based Requests
+
+* "As an INFP, what songs would resonate with me when I'm feeling creative?"
+* "I'm a Scorpio feeling introspective - suggest something deep and emotional"
+* "Give me music that fits my personality: introverted, analytical, but romantic"
+
+### 2.5 Refinement Prompts
+
+* "That's not quite right, something more upbeat"
+* "I like the first suggestion but want something from the 90s instead"
+* "Can you give me alternatives that are less mainstream?"
+
+## 3. Core Functionality
 
 *   **User Input Processing:** Accepts natural language descriptions of emotions, situations, or themes from the user.
 *   **Song & Lyric Generation:** Identifies and suggests real, existing songs along with a relevant lyric excerpt.
@@ -12,7 +48,7 @@ The Song Suggster AI is a web-based application designed to provide users with p
 *   **Personality Integration (Optional):** Can adapt suggestions based on an explicit user personality profile (e.g., astrological sign, MBTI, Big Five traits).
 *   **Refinement & Iteration:** Allows users to request refinements or alternative suggestions if the initial output is not satisfactory.
 
-## 3. Technical Stack
+## 4. Technical Stack
 
 *   **Cloud Platform:** Google Cloud Platform (GCP)
     *   **Reasoning:** Offers robust AI/ML services, scalable compute, and integrated data solutions.
@@ -30,7 +66,7 @@ The Song Suggster AI is a web-based application designed to provide users with p
 *   **Authentication:** Firebase Authentication (seamless integration with GCP, supports various authentication methods like email/password, social logins).
 *   **Monitoring & Logging:** Cloud Monitoring and Cloud Logging (integrated services for application health, performance, and debugging).
 
-## 4. High-Level Design
+## 5. High-Level Design
 
 The application will follow a microservices-oriented architecture, leveraging GCP's managed services for scalability and ease of management.
 
@@ -64,7 +100,7 @@ The application will follow a microservices-oriented architecture, leveraging GC
                                                   +----------------+
 ```
 
-## 5. High-Level Implementation Plan
+## 6. High-Level Implementation Plan
 
 This plan outlines the key phases for developing and deploying the Song Suggster AI.
 
